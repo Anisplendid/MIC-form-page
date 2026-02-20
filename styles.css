@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Login Page */
+.login-container, .verification-container {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.cancel-button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 1px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 16px;
+}
+
+.next-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff2600;
+  /* background-color: #f97316; */
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.next-button:disabled {
+  background-color: #FFD0D0;
+  /* background-color: #E8C9B5; */
+  /* background-color: #F2D0C0; */
+  /* background-color: #F9D7C2; */
+  /* background-color: #F8E0D0; */
+  cursor: not-allowed;
+}
+
+.forgot-password {
+  color: black;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* Verification Page */
+.description {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
